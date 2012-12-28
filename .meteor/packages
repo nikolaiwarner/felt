@@ -6,3 +6,11 @@
 autopublish
 insecure
 preserve-inputs
+
+coffeescript
+less
+jquery
+backbone
+bootstrap
+accounts-ui
+accounts-google
