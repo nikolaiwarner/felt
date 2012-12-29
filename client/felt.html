@@ -32,7 +32,7 @@
 
 
 <template name="new_feeling">
-  {{#if visible}}
+  {{#if currentUser}}
   <h3>how are you feeling right now?</h3>
   <div class="feeling_value">
     Bad
@@ -60,7 +60,7 @@
 
 
 <template name="feelings_list">
-  {{#if visible}}
+  {{#if currentUser}}
 
   <hr>
 

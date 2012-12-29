@@ -10,17 +10,11 @@ your_feelings = ->
 Template.feelings_list.feelings = ->
   your_feelings()
 
-Template.feelings_list.visible = ->
-  user_logged_in()
-
 Template.feelings_list.rendered = ->
   format_dates()
 
 
 # new_feeling form
-
-Template.new_feeling.visible = ->
-  user_logged_in()
 
 Template.new_feeling.rendered = ->
   in_a_word_autocomplete()
