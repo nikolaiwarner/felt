@@ -14,3 +14,5 @@ backbone
 bootstrap
 accounts-ui
 accounts-google
+moment
+jquery-ui

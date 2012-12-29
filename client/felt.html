@@ -1,0 +1,94 @@
+<head>
+  <title>felt</title>
+
+<!--   <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" /> -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="navigation clearfix">
+          <div class="logo">
+            felt
+          </div>
+          <div class="pull-right">
+            {{loginButtons}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
+
+        {{> new_feeling}}
+
+        {{> feelings_list}}
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+<template name="new_feeling">
+  {{#if visible}}
+  <h3>how are you feeling right now?</h3>
+  <div class="feeling_value">
+    Bad
+    <input type="radio" name="feeling_value" value="1">
+    <input type="radio" name="feeling_value" value="2">
+    <input type="radio" name="feeling_value" value="3" checked>
+    <input type="radio" name="feeling_value" value="4">
+    <input type="radio" name="feeling_value" value="5">
+    Good
+  </div>
+
+  <div class="ui-widget">
+    <label for="in_a_word">In a word, you felt:</label>
+    <input type="text" id="in_a_word" />
+  </div>
+
+  <label for="description">Why?</label>
+  <input type="text" class="description" />
+
+  <br>
+  <input type="button" class="btn" value="Post" id="save" />
+  {{/if}}
+</template>
+
+
+
+<template name="feelings_list">
+  {{#if visible}}
+
+  <hr>
+
+  <table class="table table-striped">
+    {{#each feelings}}
+      {{> feeling}}
+    {{/each}}
+  </table>
+  {{/if}}
+</template>
+
+
+
+<template name="feeling">
+  <tr>
+    <td>
+      <div class="date" data-date="{{date}}">
+        {{date}}
+      </div>
+    </td>
+    <td>
+      {{value}}
+    </td>
+    <td>
+      {{in_a_word}}
+    </td>
+    <td>
+      {{description}}
+    </td>
+  </tr>
+</template>
