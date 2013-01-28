@@ -1,10 +1,14 @@
+Meteor.publish "your_feelings", ->
+  Feelings.find {userId: this.userId}
+
+
 Feelings.allow
   insert: (userId, doc) ->
     # the user must be logged in, and the document must be owned by the user
     userId && doc.userId == userId
 
   update: (userId, docs, fields, modifier) ->
-    # can only change your own documents
+    # can only change your own documents`
     _.all docs, (doc) ->
       doc.userId == userId
 

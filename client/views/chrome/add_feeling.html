@@ -1,0 +1,33 @@
+<template name="chrome/add_feeling">
+  {{#if currentUser}}
+  <h3>how are you feeling right now?</h3>
+  <div class="feeling_values">
+    <div class="feeling_value btn" data-value="1">
+      :'-/
+    </div>
+    <div class="feeling_value btn" data-value="2">
+      :-(
+    </div>
+    <div class="feeling_value btn" data-value="3">
+      :-|
+    </div>
+    <div class="feeling_value btn" data-value="4">
+      :-)
+    </div>
+    <div class="feeling_value btn" data-value="5">
+      :->
+    </div>
+  </div>
+
+  <div class="ui-widget">
+    <label for="in_a_word">In a word, you felt:</label>
+    <input type="text" id="in_a_word" />
+  </div>
+
+  <label for="description">Why?</label>
+  <input type="text" class="description" />
+
+  <br>
+  <input type="button" class="btn" value="Post" id="save" />
+  {{/if}}
+</template>

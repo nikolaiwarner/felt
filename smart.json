@@ -1,6 +1,7 @@
 {
   "packages": {
     "moment": {},
-    "jquery-ui": {}
+    "jquery-ui": {},
+    "router": {}
   }
 }

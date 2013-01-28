@@ -20,43 +20,11 @@
     </div>
     <div class="row">
       <div class="span12">
-
-        {{> new_feeling}}
-
-        {{> feelings_list}}
+        {{renderPage}}
       </div>
     </div>
   </div>
 </body>
-
-
-
-<template name="new_feeling">
-  {{#if currentUser}}
-  <h3>how are you feeling right now?</h3>
-  <div class="feeling_value">
-    Bad
-    <input type="radio" name="feeling_value" value="1">
-    <input type="radio" name="feeling_value" value="2">
-    <input type="radio" name="feeling_value" value="3" checked>
-    <input type="radio" name="feeling_value" value="4">
-    <input type="radio" name="feeling_value" value="5">
-    Good
-  </div>
-
-  <div class="ui-widget">
-    <label for="in_a_word">In a word, you felt:</label>
-    <input type="text" id="in_a_word" />
-  </div>
-
-  <label for="description">Why?</label>
-  <input type="text" class="description" />
-
-  <br>
-  <input type="button" class="btn" value="Post" id="save" />
-  {{/if}}
-</template>
-
 
 
 <template name="feelings_list">
